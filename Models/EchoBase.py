@@ -1,5 +1,5 @@
 class EchoBase:
-    def __init__(self, name: str, set : str, cost: int, main_stat : str, main_stat_value : int,, flat_stat : str, flat_stat_value: int, substats : list):
+    def __init__(self, name: str, set : str, cost: int, main_stat : str, main_stat_value : int, flat_stat : str, flat_stat_value: int, substats : list):
         self.name = name
         self.set = set
         self.cost = cost
