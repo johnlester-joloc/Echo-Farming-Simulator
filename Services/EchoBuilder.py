@@ -11,3 +11,21 @@ def buildOneCostEcho(name: str, set : str):
     main_stat = random.choice(list(main_stats.keys()))
     flat_hp = 456
     return EchoBase(name, set, 1, main_stat, main_stats[main_stat], "HP", flat_hp, [])
+
+def buildThreeCostEcho(name: str, set : str):
+    main_stats = {
+        "ATK%": 6.0,
+        "HP%": 6.0,
+        "DEF%": 7.6,
+        "GlacioDmgBonus%": 6.0,
+        "FusionDmgBonus%": 6.0,
+        "ElectroDmgBonus%": 6.0,
+        "AeroDmgBonus%": 6.0,
+        "SpectroDmgBonus%": 6.0,
+        "HavocDmgBonus%": 6.0,
+        "EnergyRegen%": 6.4,
+        
+    }
+    main_stat = random.choice(list(main_stats.keys()))
+    flat_atk = 20
+    return EchoBase(name, set, 3, main_stat, main_stats[main_stat], "ATK", flat_atk, [])
