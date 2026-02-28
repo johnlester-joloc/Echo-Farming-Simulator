@@ -1,4 +1,4 @@
-from Models.EchoBase import EchoBase
+from Models import EchoBase
 from random import random
 
 def buildOneCostEcho(name: str, set : str):
@@ -29,3 +29,8 @@ def buildThreeCostEcho(name: str, set : str):
     main_stat = random.choice(list(main_stats.keys()))
     flat_atk = 20
     return EchoBase(name, set, 3, main_stat, main_stats[main_stat], "ATK", flat_atk, [])
+
+echo = buildOneCostEcho("Test Echo", "Test Set")
+print(echo.__dict__)
+echo = buildThreeCostEcho("Test Echo", "Test Set")
+print(echo.__dict__)
