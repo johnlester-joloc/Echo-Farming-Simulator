@@ -8,8 +8,6 @@ def buildOneCostEcho(name: str, set : str):
         "DEF%": 3.6,
         
     }
+    main_stat = random.choice(list(main_stats.keys()))
     flat_hp = 456
-    return EchoBase(name, set, 1, 
-                    random.choice(list(main_stats.keys())), 
-                    main_stats[random.choice(list(main_stats.keys()))], 
-                    "HP", flat_hp, [])
+    return EchoBase(name, set, 1, main_stat, main_stats[main_stat], "HP", flat_hp, [])
