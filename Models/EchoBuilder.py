@@ -1,5 +1,5 @@
-from Models import EchoBase
-from random import random
+import EchoBase as eb
+import random
 
 def buildOneCostEcho(name: str, set : str):
     main_stats = {
@@ -10,7 +10,7 @@ def buildOneCostEcho(name: str, set : str):
     }
     main_stat = random.choice(list(main_stats.keys()))
     flat_hp = 456
-    return EchoBase(name, set, 1, main_stat, main_stats[main_stat], "HP", flat_hp, [])
+    return eb.EchoBase(name, set, 1, main_stat, main_stats[main_stat], "HP", flat_hp, [])
 
 def buildThreeCostEcho(name: str, set : str):
     main_stats = {
@@ -28,7 +28,7 @@ def buildThreeCostEcho(name: str, set : str):
     }
     main_stat = random.choice(list(main_stats.keys()))
     flat_atk = 20
-    return EchoBase(name, set, 3, main_stat, main_stats[main_stat], "ATK", flat_atk, [])
+    return eb.EchoBase(name, set, 3, main_stat, main_stats[main_stat], "ATK", flat_atk, [])
 
 echo = buildOneCostEcho("Test Echo", "Test Set")
 print(echo.__dict__)
